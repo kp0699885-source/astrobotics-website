@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Astrobotics club</title>
+
+    <!-- CONNECT CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+    <h2>🚀 Astrobotics club</h2>
+</nav>
+
+<section id="home" class="img-section">
+    <img src="https://static.toiimg.com/thumb/msid-122443208,imgsize-242288,width-400,resizemode-4/122443208.jpg" class="bg-img">
+
+    <div class="overlay-content">
+        <h1>Exploring Space Through Robotics</h1>
+        <p>Innovate. Build. Explore.</p>
+    </div>
+</section>
+
+<section id="about" class="img-section">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVZ7WCMBcHPUDasNFvLoY3pd0pxnmEuadpww&s" class="bg-img">
+
+    <div class="overlay-content">
+        <h2>About Us</h2>
+        <p>We bring together students passionate about robotics...</p>
+    <div class="grid">
+
+    <div class="box" onclick="showInfo('electronics')">Electronics</div>
+    <div class="box" onclick="showInfo('ai')">AI</div>
+    <div class="box" onclick="showInfo('mechanical')">Mechanical</div>
+    <div class="box" onclick="showInfo('management')">Management</div>
+
+  </div>
+
+  <div id="info-box">
+    <p>Click a subsystem to see details</p>
+  </div>
+
+</section>
+
+<section id="events" class="img-section">
+    <img src="https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2024/11/several_exomy_rovers_are_trying_to_find_a_blue_ball_object_on_the_simulated_martian_surface/26445212-1-eng-GB/Several_ExoMy_rovers_are_trying_to_find_a_blue_ball_object_on_the_simulated_Martian_surface_pillars.jpg" class="bg-img">
+
+    <div class="overlay-content">
+        <h2>Events & Competetions</h2>
+
+  <!-- FILTER BAR -->
+  <div class="filter-bar">
+    <div onclick="filterEvents('all')">All</div>
+    <div onclick="filterEvents('upcoming')">Upcoming</div>
+    <div onclick="filterEvents('past')">Past</div>
+    <div onclick="filterEvents('featured')">Featured</div>
+  </div>
+
+  <!-- EVENTS GRID -->
+  <div class="events-container">
+
+    <div class="event" data-type="upcoming">
+      <span class="date"> 03/01/25</span>
+      <span class="tag">Past</span>
+      <h3>Robotics bootcamp</h3>
+      <p>Beginner-friendly hands-on robotics workshop.
+        Contribution: Senior members mentored, electronics team taught circuit basics.
+      </p>
+    </div>
+
+    <div class="event" data-type="past">
+      <span class="date">15/01/25</span>
+      <span class="tag">Past</span>
+      <h3>AI in planetary exploration Seminar</h3>
+      <p>A technical seminar discussing how computer vision and machine learning support robotic exploration missions.</p>
+    </div>
+
+    <div class="event" data-type="featured">
+      <span class="date">02/02/26</span>
+      <span class="tag">Featured</span>
+      <h3>AI Space Hackathon</h3>
+      <p>Build AI solutions for space missions.
+        Contribution: AI team created models, developers built UI, management handled.
+      </p>
+    </div>
+
+    <div class="event" data-type="past">
+      <span class="date">10/04/26</span>
+      <span class="tag">Past</span>
+      <h3>Space Talk Series</h3>
+      <p>Talks on space tech and future missions.
+         Contribution: Management organized speakers, team handled logistics.
+      </p>
+    </div>
+
+    <div class="event" data-type="featured">
+      <span class="date">02/04/26</span>
+      <span class="tag">Featured</span>
+      <h3>Inter-college rover competetion 2026</h3>
+      <p>Competing with other colleges in rover design.
+         Contribution: Full team collaboration across all subsystems.
+      </p>
+    </div>
+
+    <div class="event" data-type="Upcoming">
+      <span class="date">12/06/26</span>
+      <span class="tag">Featured</span>
+      <h3>Autonomous Navigation Test</h3>
+      <p> Testing robot movement in simulated terrain.
+          Contribution: AI worked on pathfinding, mechanical ensured stability.
+      </p>
+    </div>
+
+
+  </div>
+</section>
+
+<section id="Team">
+  <h2>Our Team</h2>
+  <p class="team-sub">Meet the people behind Astrobotics</p>
+
+  <div class="team-grid">
+
+    <!-- PRESIDENT - full width center -->
+    <div class="team-president" onclick="toggleDesc(this)">
+      <div class="member-inner">
+        <h4 class="role">President</h4>
+        <h3>Arnav Mehta</h3>
+        <p class="desc">Leads the overall vision and strategic direction of the Space Robotics Club. Oversees coordination between all subsystems, ensures timely execution of projects, and represents the team in competitions and collaborations.</p>
+      </div>
+    </div>
+
+    <!-- ROW 1 -->
+    <div class="team-lead-card" onclick="toggleTeamCard(this)">
+      <div class="lead-face">
+        <h4 class="role">AI Lead</h4>
+        <h3>Sakshi Goyal</h3>
+        <span class="expand-hint">tap to meet the team ↓</span>
+      </div>
+      <div class="lead-members">
+        <div class="mini-member" onclick="event.stopPropagation(); toggleDesc(this)">
+          <h4 class="role">AI Engineer</h4>
+          <h3>Priya Nair</h3>
+          <p class="desc">Works on machine learning models and rover perception systems, contributing to real-time decision-making and AI optimization.</p>
+        </div>
+        <div class="mini-member" onclick="event.stopPropagation(); toggleDesc(this)">
+          <h4 class="role">Data & AI Support</h4>
+          <h3>Devansh Kulkarni</h3>
+          <p class="desc">Supports data analysis, model training, and simulation tasks, ensuring smooth integration of AI systems with hardware.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-lead-card" onclick="toggleTeamCard(this)">
+      <div class="lead-face">
+        <h4 class="role">Electronics Lead</h4>
+        <h3>Himanshu Verma</h3>
+        <span class="expand-hint">tap to meet the team ↓</span>
+      </div>
+      <div class="lead-members">
+        <div class="mini-member" onclick="event.stopPropagation(); toggleDesc(this)">
+          <h4 class="role">Circuit Design Engineer</h4>
+          <h3>Tanvi Shetty</h3>
+          <p class="desc">Designs circuits and integrates sensors, ensuring stable electronic performance across rover systems.</p>
+        </div>
+        <div class="mini-member" onclick="event.stopPropagation(); toggleDesc(this)">
+          <h4 class="role">Embedded Systems Support</h4>
+          <h3>Rohan Bapat</h3>
+          <p class="desc">Assists in wiring, debugging, and maintaining embedded systems for efficient hardware functionality.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROW 2 -->
+    <div class="team-lead-card" onclick="toggleTeamCard(this)">
+      <div class="lead-face">
+        <h4 class="role">Mechanical Lead</h4>
+        <h3>Raghav Sharma</h3>
+        <span class="expand-hint">tap to meet the team ↓</span>
+      </div>
+      <div class="lead-members">
+        <div class="mini-member" onclick="event.stopPropagation(); toggleDesc(this)">
+          <h4 class="role">Design Engineer</h4>
+          <h3>Ishaan Chauhan</h3>
+          <p class="desc">Works on advanced design simulations and improves structural efficiency of rover systems.</p>
+        </div>
+        <div class="mini-member" onclick="event.stopPropagation(); toggleDesc(this)">
+          <h4 class="role">Fabrication Support</h4>
+          <h3>Ananya Pillai</h3>
+          <p class="desc">Assists in CAD modeling, fabrication, and iterative testing of mechanical components.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-lead-card" onclick="toggleTeamCard(this)">
+      <div class="lead-face">
+        <h4 class="role">Mission Management Lead</h4>
+        <h3>Aakrit Gogoi</h3>
+        <span class="expand-hint">tap to meet the team ↓</span>
+      </div>
+      <div class="lead-members">
+        <div class="mini-member" onclick="event.stopPropagation(); toggleDesc(this)">
+          <h4 class="role">Operations Coordinator</h4>
+          <h3>Shreya Menon</h3>
+          <p class="desc">Manages communication and coordination across teams, ensuring smooth workflow and documentation.</p>
+        </div>
+        <div class="mini-member" onclick="event.stopPropagation(); toggleDesc(this)">
+          <h4 class="role">Logistics & Outreach</h4>
+          <h3>Kabir Malhotra</h3>
+          <p class="desc">Handles logistics, external communication, and supports resource management for team activities.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="Gallery">
+  <h2>Gallery</h2>
+  <p class="gallery-sub">A quick peek into our team's memories</p>
+
+  <div class="gallery-track">
+
+    <div class="gallery-card" onclick="openLightbox(0)">
+      <div class="gallery-img-wrap">
+        <img src="https://blog.schoolspecialty.com/wp-content/uploads/2022/01/kids-coding-designing-robotics-GettyImages-1321196626-1200x624.jpg" alt="Robotics Workshop" />
+        <div class="gallery-overlay">
+          <span>🔍 View More</span>
+        </div>
+      </div>
+      <p class="gallery-caption">Robotics Bootcamp</p>
+    </div>
+
+    <div class="gallery-card" onclick="openLightbox(1)">
+      <div class="gallery-img-wrap">
+        <img src="https://indiancst.in/images/ai_courses_images/37,35.jpg" alt="Rover Build" />
+        <div class="gallery-overlay">
+          <span>🔍 View More</span>
+        </div>
+      </div>
+      <p class="gallery-caption">AI in planetary exploration</p>
+    </div>
+
+    <div class="gallery-card" onclick="openLightbox(2)">
+      <div class="gallery-img-wrap">
+        <img src="https://i.ytimg.com/vi/O9vCv5IrgPU/sddefault.jpg" alt="AI Space Hackathon" />
+        <div class="gallery-overlay">
+          <span>🔍 View More</span>
+        </div>
+      </div>
+      <p class="gallery-caption">AI Space Hackathon 2026</p>
+    </div>
+
+    <div class="gallery-card" onclick="openLightbox(3)">
+      <div class="gallery-img-wrap">
+        <img src="https://www.ssl.berkeley.edu/wp-content/uploads/2025/11/LindyTalk_web1-1024x682.jpg" alt="Team Photo" />
+        <div class="gallery-overlay">
+          <span>🔍 View More</span>
+        </div>
+      </div>
+      <p class="gallery-caption">Team @ Space Talk</p>
+    </div>
+
+    <div class="gallery-card" onclick="openLightbox(4)">
+      <div class="gallery-img-wrap">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLZePSGDnAx5auY9yNKwzk7pP3F1Xl5GEu7g&s" />
+        <div class="gallery-overlay">
+          <span>🔍 View More</span>
+        </div>
+      </div>
+      <p class="gallery-caption">Inter-College Rover</p>
+    </div>
+
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <div class="lightbox-box" onclick="event.stopPropagation()">
+      <button class="lb-close" onclick="closeLightbox()">✕</button>
+      <button class="lb-arrow left" onclick="shiftImage(-1)">‹</button>
+      <img id="lb-img" src="" alt="" />
+      <button class="lb-arrow right" onclick="shiftImage(1)">›</button>
+      <p id="lb-caption"></p>
+    </div>
+  </div>
+
+</section>
+
+<section id="Recruitment">
+  <h2>Join Us</h2>
+  <p class="recruit-sub">Be part of the next frontier</p>
+
+  <div class="recruit-wrap">
+
+    <!-- PROCESS CARD -->
+    <div class="recruit-card process-card">
+      <div class="recruit-card-inner">
+        <div class="recruit-card-front">
+          <div class="card-glow"></div>
+          <h3>🛸 How to Join</h3>
+          <p class="flip-hint">hover to explore ↓</p>
+        </div>
+        <div class="recruit-card-back">
+          <ol class="process-list">
+            <li>
+              <span class="step-num">01</span>
+              <div>
+                <strong>Fill the Interest Form</strong>
+                <p>Complete our online form with your background, interests, and which subsystem you'd like to join.</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-num">02</span>
+              <div>
+                <strong>Shortlisting</strong>
+                <p>Applications are reviewed by leads. Shortlisted candidates are notified within 5–7 working days.</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-num">03</span>
+              <div>
+                <strong>Technical / Interest Round</strong>
+                <p>A brief interaction with the subsystem lead to assess your curiosity and basic knowledge.</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-num">04</span>
+              <div>
+                <strong>Welcome Aboard!</strong>
+                <p>Selected members receive an onboarding kit and are added to the team channels.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT CARD -->
+    <div class="recruit-card contact-3d-card">
+      <div class="recruit-card-inner contact-inner">
+        <div class="recruit-card-front contact-front">
+          <div class="card-glow contact-glow"></div>
+          <div class="contact-avatar">AK</div>
+          <h3>Aakrit Gogoi</h3>
+          <p class="contact-role-tag">Mission Management Lead</p>
+          <p class="flip-hint">hover to reveal contact ↓</p>
+        </div>
+        <div class="recruit-card-back contact-back">
+          <div class="contact-avatar back-avatar">AK</div>
+          <h3>Aakrit Gogoi</h3>
+          <p class="contact-role-tag">Recruitment Point of Contact</p>
+          <div class="contact-links">
+            <a class="clink email-link" href="mailto:aakrit.gogoi@college.edu">
+              <span class="clink-icon">✉</span>
+              <span>aakrit.gogoi@college.edu</span>
+            </a>
+            <a class="clink phone-link" href="tel:+919438127650">
+              <span class="clink-icon">📞</span>
+              <span>+91 94381 27650</span>
+            </a>
+          </div>
+          <a class="apply-btn" href="#">Apply Now →</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="Get in Touch">
+  <h2>Contact</h2>
+  <p class="contact-sub">We'd love to hear from you</p>
+
+  <div class="contact-wrap">
+
+    <!-- Email -->
+    <div class="contact-item" onclick="copyText('astrobotics@college.edu', this)">
+      <div class="contact-icon">✉</div>
+      <div class="contact-detail">
+        <span class="contact-type">Club Email</span>
+        <span class="contact-value">astrobotics@college.edu</span>
+      </div>
+      <span class="copy-hint">click to copy</span>
+    </div>
+
+    <!-- Management Lead -->
+    <div class="contact-item">
+      <div class="contact-icon">📡</div>
+      <div class="contact-detail">
+        <span class="contact-type">Mission Management Lead</span>
+        <span class="contact-value">Aakrit Gogoi</span>
+        <span class="contact-phone">+91 94381 27650</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONNECT JS -->
+<script src="script.js"></script>
+
+</body>
+</html>
